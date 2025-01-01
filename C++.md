@@ -102,7 +102,10 @@ c++多态有以下几种：
 
 **对齐规则**
 
-由于在x86下，GCC默认按4字节对齐，但是可以使用`__attribute__`选项改变对齐规则， vs studio上用`#pragma pack (n)`方式改变
+由于在x86下，GCC默认按4字节对齐，但是可以使用`__attribute__`选项改变对齐规则， vs studio上用`#pragma pack (n)`方式改变  
+可以跟着以下步骤走：
+- 找到占用空间最大的基础类型（struct则拆开），记作 $$Mem_{max}$$
+- 将struct当前正在计算的成员变量占用空间记作 $$Mem_{curr}$$，struct总大小记作 $$ans$$，之前已经计算的空间大小为 $$sum$$，当 $$sum + Mem_{curr} < Mem_{max}$$时，将 $$sum=sum+Mem_{curr}$$，否则 $$ans=ans+Mem_{max}, sum = Mem_{curr}$$
 
 举例子：
 
