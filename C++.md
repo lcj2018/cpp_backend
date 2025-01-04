@@ -367,6 +367,7 @@ text段：代码段，text段在内存中被映射为只读，但.data和.bss是
 - static和const可以同时修饰成员函数吗?
 
   答：不可以。C++编译器在实现const的成员函数的时候为了确保该函数不能修改类的实例的状态，会在函数中添加一个隐式的参数const this*。但当一个成员为static的时候，该函数是没有this指针的。也就是说此时const的用法和static是冲突的。两者的语意是矛盾的。**static的作用是表示该函数只作用在类型的静态变量上，与类的实例没有关系；而const的作用是确保函数不能修改类的实例的状态**，与类型的静态变量没有关系。因此不能同时用它们。
+  > 同时static也不能和volatile同时修饰成员函数，使用const/volatile编译器均会告知static member function cannot use cv-qualifier，其中cv指代const/volatile.
 
 
 
