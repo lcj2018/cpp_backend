@@ -71,9 +71,9 @@
    - 将.o文件打包
      - ar rcs  静态库名称   原材料(ex: ar rcs libtest.a  a.0)
 
-   - 态库的使用
+   - 静态库的使用
 
-   <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210608145829.png" alt="image-20210509140337810" style="zoom: 50%;" align="left" />
+   <img src="https://cdn.jsdelivr.net/gh/luogou/cloudimg/data/20210608145829.png" alt="image-20210509140337810" style="zoom: 50%;" align="left" />  
 
 3. 动态库的制作(so代表动态库)
    - 命名规则：libxxx.so
