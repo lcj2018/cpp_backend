@@ -191,7 +191,7 @@ int socket(int domain,int type,int protocol);
   //IPv4中面向连接的套接字
   int tcp_socket=(PF_INET,SOCK_STREAM,IPPROTO_TCP)
   //IPv4中面向消息的套接字
-  int tcp_socket=(PF_INET,SOCK_STREAM,IPPROTO_UDP)
+  int tcp_socket=(PF_INET,SOCK_DGRAM,IPPROTO_UDP)
   ```
 
   
