@@ -2040,6 +2040,14 @@ stack unwinding:Unwinding is the removal of the functions from the stack in the 
 
 - enum class 、enum struct 
 
+```c++
+enum class A: int { X, Y };
+enum class B: int { X, Y };
+
+A a = A::X;
+B b = B::X;
+```
+
   有更好的类型安全和封装的特性。
 
   1. 与整形之间不会发生隐式类型转换，除非用static_cast强制转换
